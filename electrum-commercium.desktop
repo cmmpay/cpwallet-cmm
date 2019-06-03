@@ -1,0 +1,21 @@
+# If you want cpwallet-cmm to appear in a Linux app launcher ("start menu"), install this by doing:
+# sudo desktop-file-install cpwallet-cmm.desktop
+
+[Desktop Entry]
+Comment=Lightweight commercium Client
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" cpwallet-cmm %u"
+GenericName[en_US]=commercium Wallet
+GenericName=commercium Wallet
+Icon=cpwallet-cmm.png
+Name[en_US]=cpwallet-cmm Bitcoin Wallet
+Name=cpwallet-cmm Bitcoin Wallet
+Categories=Finance;Network;
+StartupNotify=false
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/commercium;
+Actions=Testnet;
+
+[Desktop Action Testnet]
+Exec=sh -c "PATH=\"\\$HOME/.local/bin:\\$PATH\" cpwallet-cmm --testnet %u"
+Name=Testnet mode
