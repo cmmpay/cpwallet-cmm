@@ -685,7 +685,7 @@ class ElectrumWindow(App):
             icon = (os.path.dirname(os.path.realpath(__file__))
                     + '/../../' + self.icon)
             notification.notify('cpwallet-cmm', message,
-                            app_icon=icon, app_name='Electrum')
+                            app_icon=icon, app_name='CMMPay CMM')
         except ImportError:
             Logger.Error('Notification: needs plyer; `sudo pip install plyer`')
 
