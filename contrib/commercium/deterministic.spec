@@ -121,7 +121,7 @@ exe = EXE(pyz,
           upx=False,
           console=False,
           icon='icons/cpwallet-cmm.ico',
-          name=os.path.join('build\\pyi.win32\\electrum', cmdline_name))
+          name=os.path.join('build\\pyi.win32\\cpwallet-cmm', cmdline_name))
 
 # exe with console output
 conexe = EXE(pyz,
@@ -132,7 +132,7 @@ conexe = EXE(pyz,
           upx=False,
           console=True,
           icon='icons/cpwallet-cmm.ico',
-          name=os.path.join('build\\pyi.win32\\electrum',
+          name=os.path.join('build\\pyi.win32\\cpwallet-cmm',
                             'console-%s' % cmdline_name))
 
 # trezorctl separate executable
@@ -150,7 +150,7 @@ tctl_exe = EXE(tctl_pyz,
            strip=False,
            upx=False,
            console=True,
-           name=os.path.join('build\\pyi.win32\\electrum', 'trezorctl.exe'))
+           name=os.path.join('build\\pyi.win32\\cpwallet-cmm', 'trezorctl.exe'))
 
 coll = COLLECT(exe, conexe, tctl_exe,
                a.binaries,
